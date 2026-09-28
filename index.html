@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Get Gerry Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Get Gerry Home game area"></canvas>
+
+  <div id="hud" aria-live="polite">
+    <span>Level <b id="hud-level">1</b></span>
+    <span class="sep">Best <b id="hud-best">1</b></span>
+  </div>
+
+  <div id="buttons">
+    <button id="mute" class="icon-btn" type="button" aria-label="Mute music" title="Mute music">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/>
+        <path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path class="cross" d="M16 9l6 6M22 9l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button id="pause" class="icon-btn" type="button" aria-label="Pause" title="Pause">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+  <div id="toast" aria-live="polite"></div>
+
+  <section id="title" class="overlay">
+    <div class="card">
+      <div class="stripes" aria-hidden="true"></div>
+      <h1>Get Gerry Home</h1>
+      <p class="lead">Gerry is lost in a pitch-dark maze. Guide him to the <span class="checker" aria-hidden="true"></span> checkered exit before his light fades out.</p>
+      <ul class="legend">
+        <li><i class="dot gerry"></i>Gerry. His light shrinks when he gets hurt.</li>
+        <li><i class="dot shooter"></i>Turrets shoot at him on sight.</li>
+        <li><i class="dot mine"></i>Mines chase him, then explode.</li>
+        <li><i class="dot item"></i>Pick up shields and maps.</li>
+      </ul>
+      <p class="controls"><span class="kbd-only">Move with <kbd>WASD</kbd> or the arrow keys, or hold the mouse button toward where Gerry should go.</span><span class="touch-only">Touch and hold toward where Gerry should walk: the farther from him, the faster he goes.</span></p>
+      <button id="play-button" class="big-btn" type="button" autofocus>Play</button>
+    </div>
+  </section>
+
+  <section id="paused" class="overlay" hidden>
+    <div class="card small">
+      <h2>Paused</h2>
+      <button id="resume-button" class="big-btn" type="button">Resume</button>
+    </div>
+  </section>
+
+  <section id="lost" class="overlay" hidden>
+    <div class="card small">
+      <h2>Gerry got lost</h2>
+      <p class="lead">His light went out on level <b id="lost-level">1</b>.<br>Best: level <b id="lost-best">1</b></p>
+      <button id="retry-button" class="big-btn" type="button">Try again</button>
+    </div>
+  </section>
+
+  <section id="no-webgl" class="overlay" hidden>
+    <div class="card small">
+      <h2>WebGL needed</h2>
+      <p class="lead">Your browser could not start WebGL, which this game needs to draw the maze. Try another browser or enable hardware acceleration.</p>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>

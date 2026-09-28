@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Get Gerry Home",
+  "description": "Guide Gerry through pitch-black mazes with only a flickering light, dodging turrets and chasing mines, free to play in your browser.",
+  "about": "Gerry is lost, and all he has is a small flickering light. Every level is a freshly generated maze that stays hidden in darkness: walls cast real-time shadows, so you only ever see the corridor right around him. Find the checkered exit to bring him one step closer to home, and the next maze gets bigger.\n\nThe dark is not empty. Red turrets fire bursts of bullets the moment Gerry is in sight, and blue mines creep after him before blowing up, sometimes taking a turret with them. Every hit shrinks his light, so a bad run literally fades to black. Rare pickups help: a shield blocks all damage for ten seconds and a map briefly reveals the whole maze and the way out.\n\nOriginally created by Jacob Gardner for js13kGames 2017.",
+  "howToPlay": "Walk Gerry from the striped start tile to the checkered exit of each maze. Turret bullets and mine explosions shrink his light, and if it goes out he is lost and you start again from the first maze. Reaching the exit fully restores the light and opens a larger maze.",
+  "controls": [
+    { "input": "WASD / Arrow keys", "action": "Move Gerry" },
+    { "input": "Hold mouse button", "action": "Walk toward the cursor" },
+    { "input": "Touch and hold", "action": "Walk toward your finger (farther means faster)" },
+    { "input": "Esc / P", "action": "Pause" }
+  ],
+  "tips": [
+    "The striped start tile is a safe zone: nothing can hurt Gerry while he stands on it.",
+    "Lure a chasing mine next to a turret so its explosion destroys the turret for you.",
+    "Turrets fire in bursts, so dash past right after a volley while they reload.",
+    "Visited corridors turn white, which makes backtracking out of dead ends much easier."
+  ],
+  "faq": [
+    {
+      "question": "Is Get Gerry Home free to play?",
+      "answer": "Yes, it is completely free and runs in your browser with no download or sign-up."
+    },
+    {
+      "question": "Can I play on a phone or tablet?",
+      "answer": "Yes. Touch and hold anywhere on the screen and Gerry walks toward your finger, in portrait or landscape; it needs a browser with WebGL."
+    },
+    {
+      "question": "What happens when Gerry's light goes out?",
+      "answer": "He gets lost and you start again from the small first maze, but your best level is saved on your device."
+    }
+  ],
+  "category": "Arcade",
+  "tags": ["maze", "dark", "survival", "procedural", "flashlight", "js13k"],
+  "author": "Jacob Gardner",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": ["screenshots/1.png", "screenshots/2.png", "screenshots/3.png"],
+  "added": "2026-09-28",
+  "draft": false
+}
